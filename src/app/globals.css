@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --background-soft: #f6faf7;
+  --foreground: #14231c;
+  --muted-foreground: #55645d;
+
+  --primary: #1b4d33;
+  --primary-dark: #0f3421;
+  --primary-light: #e9f3ec;
+  --primary-tint: #f3f8f4;
+
+  --border: #e3e9e5;
+  --ring: #2f7d50;
+
+  --destructive: #b3261e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-soft: var(--background-soft);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-primary-tint: var(--primary-tint);
+
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --color-destructive: var(--destructive);
+
+  --font-sans: var(--font-pretendard);
+  --font-serif: var(--font-lora);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
+  font-feature-settings: "tnum";
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
