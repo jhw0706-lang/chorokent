@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   CarSimpleIcon,
   MapPinIcon,
@@ -5,7 +6,6 @@ import {
   PhoneCallIcon,
   TrainIcon,
 } from "@phosphor-icons/react/ssr";
-import { CrossPattern } from "./CrossPattern";
 
 const ADDRESS = "서울특별시 송파구 백제고분로 187 3층";
 const PHONE_NUMBER = "02-997-9988";
@@ -29,19 +29,15 @@ export default function Location() {
           찾아오시는 길
         </h2>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1fr]">
-          <div
-            aria-hidden
-            className="relative flex min-h-[260px] flex-col items-center justify-center gap-3 overflow-hidden rounded-3xl border border-border bg-primary-light text-primary"
-          >
-            <CrossPattern
-              id="location-cross-pattern"
-              className="pointer-events-none absolute inset-0 h-full w-full text-primary/10"
+        <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1fr] lg:items-start">
+          <div className="relative aspect-[1672/941] w-full overflow-hidden rounded-3xl border border-border">
+            <Image
+              src="/images/location-map.png"
+              alt="9호선 삼전역 1번 출구 인근 초록이비인후과의원 위치 약도"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-contain"
             />
-            <MapPinIcon size={48} weight="fill" className="relative" />
-            <p className="relative text-sm font-medium">
-              9호선 삼전역 1번 출구 인근
-            </p>
           </div>
 
           <div className="flex flex-col justify-center gap-6 rounded-3xl border border-border bg-white p-6 sm:p-9">
@@ -64,7 +60,7 @@ export default function Location() {
               <div>
                 <p className="text-sm font-semibold text-muted-foreground">지하철</p>
                 <p className="mt-1 text-base font-medium text-foreground">
-                  9호선 삼전역 1번 출구
+                  9호선 삼전역 1번 출구, 맘스터치 건물 3층
                 </p>
               </div>
             </div>

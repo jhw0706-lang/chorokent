@@ -75,10 +75,10 @@ export default function Hours() {
           <div className="relative inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15">
             <ClockClockwiseIcon size={26} aria-hidden />
           </div>
-          <h3 className="relative mt-6 text-xl font-bold">진료 예약 및 문의</h3>
+          <h3 className="relative mt-6 text-xl font-bold">진료 문의</h3>
           <p className="relative mt-3 text-[15px] leading-relaxed text-white/80">
-            전화로 진료 예약 및 문의가 가능합니다. 진료시간 내에 연락
-            주시면 안내해 드리겠습니다.
+            전화로 진료 문의가 가능합니다. 진료시간 내에 연락 주시면
+            안내해 드리겠습니다.
           </p>
           <a
             href={`tel:${PHONE_NUMBER.replace(/-/g, "")}`}

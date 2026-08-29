@@ -6,11 +6,10 @@ export type FeeItem = {
 export const FEE_NOTICE_DATE = "2026년 8월";
 
 export const FEE_ITEMS: FeeItem[] = [
-  { name: "인대증식치료(척추, 관절)", price: "10만원" },
   { name: "히루니다제", price: "10만원" },
   { name: "히스토불린주", price: "8–15만원" },
   { name: "비타민D주", price: "4.5만원" },
-  { name: "해열·진통주사", price: "4–9만원" },
+  { name: "해열진통수액주사", price: "4–9만원" },
   { name: "아미노산주", price: "4–10만원" },
   { name: "은행엽건조엑스", price: "10만원" },
   { name: "티옥트산", price: "15만원" },

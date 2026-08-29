@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CaretRightIcon, HouseIcon } from "@phosphor-icons/react/ssr";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingCallButton from "@/components/FloatingCallButton";
+import FloatingActions from "@/components/FloatingActions";
 import { FEE_ITEMS, FEE_NOTICE_DATE } from "@/lib/fees";
 
 export const metadata: Metadata = {
@@ -84,7 +84,7 @@ export default function FeesPage() {
         </section>
       </main>
       <Footer />
-      <FloatingCallButton />
+      <FloatingActions />
     </>
   );
 }

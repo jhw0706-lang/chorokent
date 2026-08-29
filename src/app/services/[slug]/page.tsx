@@ -10,7 +10,7 @@ import {
 } from "@phosphor-icons/react/ssr";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingCallButton from "@/components/FloatingCallButton";
+import FloatingActions from "@/components/FloatingActions";
 import { SERVICES, getServiceBySlug, getRelatedServices } from "@/lib/services";
 
 const PHONE_NUMBER = "02-997-9988";
@@ -182,7 +182,7 @@ export default async function ServiceDetailPage({
         </section>
       </main>
       <Footer />
-      <FloatingCallButton />
+      <FloatingActions />
     </>
   );
 }

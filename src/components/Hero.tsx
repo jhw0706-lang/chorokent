@@ -1,7 +1,4 @@
-import { PhoneCallIcon } from "@phosphor-icons/react/ssr";
 import { OrbitGraphic } from "./OrbitGraphic";
-
-const PHONE_NUMBER = "02-997-9988";
 
 export default function Hero() {
   return (
@@ -49,13 +46,6 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
-              href={`tel:${PHONE_NUMBER.replace(/-/g, "")}`}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-            >
-              <PhoneCallIcon size={18} weight="fill" aria-hidden />
-              전화로 문의하기
-            </a>
             <a
               href="#hours"
               className="text-sm font-semibold text-foreground/70 underline decoration-border underline-offset-4 transition-colors hover:text-primary"
