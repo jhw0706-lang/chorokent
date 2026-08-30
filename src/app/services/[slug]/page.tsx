@@ -88,7 +88,7 @@ export default async function ServiceDetailPage({
 
             <a
               href={`tel:${PHONE_NUMBER.replace(/-/g, "")}`}
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-accent-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
             >
               <PhoneCallIcon size={18} weight="fill" aria-hidden />
               {PHONE_NUMBER}

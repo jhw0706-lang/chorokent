@@ -15,7 +15,7 @@ export function LogoMark({ size = 40, className }: LogoMarkProps) {
       role="img"
       aria-label="초록이비인후과의원 로고"
     >
-      <rect width="100" height="100" rx="22" className="fill-primary" />
+      <rect width="100" height="100" rx="22" className="fill-accent" />
       <g transform="rotate(-8 42 50)">
         <rect x="12" y="40" width="52" height="20" rx="10" fill="white" />
       </g>
@@ -38,7 +38,7 @@ export function Logo({ markSize = 40, className, wordmarkClassName }: LogoProps)
     <div className={`inline-flex items-center gap-2.5 ${className ?? ""}`}>
       <LogoMark size={markSize} />
       <span
-        className={`font-bold tracking-tight text-primary ${wordmarkClassName ?? "text-lg"}`}
+        className={`font-bold tracking-tight text-accent ${wordmarkClassName ?? "text-lg"}`}
       >
         초록이비인후과의원
       </span>

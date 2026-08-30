@@ -82,7 +82,7 @@ export default function Hours() {
           </p>
           <a
             href={`tel:${PHONE_NUMBER.replace(/-/g, "")}`}
-            className="relative mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-base font-semibold text-primary transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            className="relative mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-base font-semibold text-accent transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             <PhoneCallIcon size={20} weight="fill" aria-hidden />
             {PHONE_NUMBER}

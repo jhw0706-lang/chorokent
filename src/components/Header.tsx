@@ -38,7 +38,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <a
             href={`tel:${PHONE_NUMBER.replace(/-/g, "")}`}
-            className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-accent-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:inline-flex"
           >
             <PhoneCallIcon size={18} weight="fill" aria-hidden />
             {PHONE_NUMBER}
@@ -77,7 +77,7 @@ export default function Header() {
             <li className="mt-2">
               <a
                 href={`tel:${PHONE_NUMBER.replace(/-/g, "")}`}
-                className="flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-base font-semibold text-white"
+                className="flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-base font-semibold text-white"
               >
                 <PhoneCallIcon size={20} weight="fill" aria-hidden />
                 {PHONE_NUMBER}
