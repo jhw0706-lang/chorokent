@@ -9,7 +9,7 @@ export default function FloatingActions() {
       <a
         href={`tel:${PHONE_NUMBER.replace(/-/g, "")}`}
         aria-label={`전화 문의 ${PHONE_NUMBER}`}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-accent text-white shadow-lg transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring motion-reduce:transition-none"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring motion-reduce:transition-none"
       >
         <PhoneCallIcon size={24} weight="fill" aria-hidden />
       </a>

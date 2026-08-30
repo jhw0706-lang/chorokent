@@ -40,23 +40,11 @@ export default function Hero() {
             <br />
             믿을 수 있는 진료
           </h1>
-          <p className="mt-6 max-w-sm text-base leading-relaxed text-muted-foreground">
+          <p className="mt-6 max-w-sm text-pretty text-base leading-relaxed text-muted-foreground">
             알레르기, 비염, 이석증부터 난청·이명까지 — 초록이비인후과의원이
             원인을 정확히 찾아 꾸준히 함께 관리해 드립니다.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
-              href="#hours"
-              className="text-sm font-semibold text-foreground/70 underline decoration-border underline-offset-4 transition-colors hover:text-primary"
-            >
-              진료시간 확인
-            </a>
-          </div>
-
-          <p className="mt-6 text-sm text-muted-foreground">
-            송파구 9호선 삼전역 1번 출구
-          </p>
         </div>
 
         <div className="relative mt-4 lg:mt-0">
