@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div className="flex items-center gap-2.5">
             <LogoMark size={32} />
-            <span className="text-base font-bold text-primary">
+            <span className="text-base font-bold text-accent">
               초록이비인후과의원
             </span>
           </div>
