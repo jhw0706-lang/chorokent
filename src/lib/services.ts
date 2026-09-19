@@ -6,7 +6,6 @@ import {
   MicrophoneIcon,
   WavesIcon,
   EarIcon,
-  WaveformIcon,
   TargetIcon,
 } from "@phosphor-icons/react/ssr";
 import type { Icon } from "@phosphor-icons/react";
@@ -189,68 +188,44 @@ export const SERVICES: ServiceDetail[] = [
     ],
     visitGuide:
       "자세를 바꿀 때마다 반복적으로 핑 도는 어지럼증이 있다면 내원해 정확한 원인을 확인해 보세요.",
-    related: ["hearing-loss", "tinnitus"],
+    related: ["hearing-loss"],
   },
   {
     slug: "hearing-loss",
-    title: "난청",
-    shortDescription: "청력 검사를 통해 난청의 정도와 원인을 확인하고 관리합니다.",
+    title: "난청·이명",
+    shortDescription: "청력 검사를 통해 난청과 이명(귀 울림)의 정도와 원인을 확인하고 관리합니다.",
     icon: EarIcon,
-    tagline: "잘 안 들리는 느낌, 방치하지 말고 검사받아보세요",
+    tagline: "잘 안 들리거나 귀가 울린다면, 방치하지 말고 검사받아보세요",
     symptoms: [
       "특정 소리나 주파수가 잘 들리지 않음",
       "되묻는 일이 잦아지고 TV·전화 소리를 키우게 됨",
       "한쪽 귀가 갑자기 안 들리는 경우(돌발성 난청 의심)",
+      "외부 소리 없이 귀나 머리에서 들리는 '삐-', '웅웅' 등의 이명",
+      "한쪽 또는 양쪽 귀에서 지속적이거나 간헐적으로 발생하는 귀 울림",
     ],
     causes: [
       "노화성 난청, 소음 노출로 인한 소음성 난청",
       "중이염 등 염증성 질환, 귀지·이물질",
       "돌발성 난청(원인 불명, 응급 치료가 필요한 경우)",
+      "스트레스·피로 등으로 인한 이명(원인이 명확하지 않은 경우도 많음)",
     ],
     diagnosis: [
       "순음청력검사, 고막운동성검사",
-      "필요 시 이명검사 또는 영상검사로 원인 감별",
+      "이명도 검사",
+      "필요 시 영상검사로 다른 원인 감별",
     ],
     treatment: [
       "원인에 따른 약물치료",
       "필요 시 보청기 상담 및 처방",
       "돌발성 난청은 조기 스테로이드 치료(경구 또는 고실 주사)가 예후에 중요",
+      "이명 재훈련 치료",
+      "증상이 심한 경우 고실 주사 등 추가 치료 고려",
     ],
     urgent:
       "한쪽 귀가 갑자기 안 들린다면 돌발성 난청일 수 있습니다. 치료 시기가 예후에 큰 영향을 미치므로 가능한 한 빨리 내원해 주세요.",
     visitGuide:
-      "소리가 잘 안 들리는 느낌이 계속되거나 주변에서 난청을 지적한다면 청력검사를 받아보시는 것이 좋습니다.",
-    related: ["tinnitus", "tympanic-injection"],
-  },
-  {
-    slug: "tinnitus",
-    title: "이명",
-    shortDescription: "귀 울림의 원인을 검사하고 증상 완화를 위한 진료를 진행합니다.",
-    icon: WaveformIcon,
-    tagline: "삐- 하는 귀 울림, 원인을 함께 찾아드립니다",
-    symptoms: [
-      "외부 소리 없이 귀나 머리에서 들리는 '삐-', '웅웅' 등의 소리",
-      "한쪽 또는 양쪽 귀에서 지속적이거나 간헐적으로 발생",
-      "난청, 어지럼증이 함께 나타나기도 함",
-    ],
-    causes: [
-      "소음 노출, 노화성 난청",
-      "스트레스·피로, 중이염 등 귀 질환",
-      "원인이 명확하지 않은 경우도 많음",
-    ],
-    diagnosis: [
-      "청력검사, 이명도 검사",
-      "필요 시 영상검사로 다른 원인 감별",
-    ],
-    treatment: [
-      "원인 질환이 있는 경우 해당 질환 치료",
-      "이명 재훈련 치료",
-      "난청이 동반된 경우 보청기 고려",
-      "증상이 심한 경우 고실 주사 등 추가 치료 고려",
-    ],
-    visitGuide:
-      "이명이 2주 이상 지속되거나 일상생활·수면에 지장을 준다면, 특히 한쪽 귀에서 갑자기 시작되었다면 내원해 보세요.",
-    related: ["hearing-loss", "tympanic-injection"],
+      "소리가 잘 안 들리거나 이명이 계속된다면, 특히 한쪽 귀에서 갑자기 시작되었다면 청력검사를 받아보시는 것이 좋습니다.",
+    related: ["vertigo", "tympanic-injection"],
   },
   {
     slug: "tympanic-injection",
@@ -273,7 +248,7 @@ export const SERVICES: ServiceDetail[] = [
     ],
     visitGuide:
       "시술 후 일시적인 어지럼증이 있을 수 있습니다. 돌발성 난청, 메니에르병, 이명 등으로 치료 중이라면 담당의와 상담해 진행 여부를 결정합니다.",
-    related: ["hearing-loss", "tinnitus"],
+    related: ["hearing-loss"],
   },
 ];
 

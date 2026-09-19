@@ -7,6 +7,7 @@ import { ListIcon, PhoneCallIcon, XIcon } from "@phosphor-icons/react";
 const NAV_ITEMS = [
   { href: "#about", label: "병원소개" },
   { href: "#services", label: "진료과목" },
+  { href: "#iv-clinic", label: "수액 클리닉" },
   { href: "#hours", label: "진료시간" },
   { href: "#location", label: "오시는길" },
 ];

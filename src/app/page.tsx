@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import IVClinic from "@/components/IVClinic";
 import About from "@/components/About";
 import Hours from "@/components/Hours";
 import Location from "@/components/Location";
@@ -23,6 +24,7 @@ export default function Home() {
         />
         <Hero />
         <Services />
+        <IVClinic />
         <About />
         <Hours />
         <Location />

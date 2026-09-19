@@ -21,7 +21,7 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: "초록이비인후과의원",
   description:
-    "송파구 삼전역 초록이비인후과의원 — 알레르기, 면역치료, 비염, 이석증/어지럼증, 난청, 이명 진료. 정확한 진단과 신뢰할 수 있는 진료를 약속합니다.",
+    "송파구 삼전역 초록이비인후과의원 — 알레르기, 면역치료, 비염, 이석증/어지럼증, 난청·이명 진료. 정확한 진단과 신뢰할 수 있는 진료를 약속합니다.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

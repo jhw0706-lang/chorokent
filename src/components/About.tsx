@@ -1,7 +1,11 @@
+import Image from "next/image";
 import {
   HandHeartIcon,
   ShieldCheckIcon,
   StethoscopeIcon,
+  GraduationCapIcon,
+  BriefcaseIcon,
+  TrophyIcon,
 } from "@phosphor-icons/react/ssr";
 import type { Icon } from "@phosphor-icons/react";
 
@@ -29,6 +33,34 @@ const VALUES: Value[] = [
     title: "꾸준한 관리",
     description:
       "한 번의 진료로 끝내지 않고, 증상 변화를 지켜보며 다음 진료 시기와 관리 방법을 함께 정합니다.",
+  },
+];
+
+type CredentialGroup = {
+  icon: Icon;
+  heading: string;
+  items: string[];
+};
+
+const CREDENTIALS: CredentialGroup[] = [
+  {
+    icon: GraduationCapIcon,
+    heading: "학력",
+    items: ["인제대학교 의과대학 졸업"],
+  },
+  {
+    icon: BriefcaseIcon,
+    heading: "경력",
+    items: ["前 인제대학교 일산백병원", "前 국립경찰병원 이비인후과"],
+  },
+  {
+    icon: TrophyIcon,
+    heading: "수상",
+    items: [
+      "국군의무사령관 준장 표창",
+      "해군교육사령관 중장 표창",
+      "보건복지부 장관상",
+    ],
   },
 ];
 
@@ -62,6 +94,54 @@ export default function About() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 rounded-2xl border border-border bg-white p-8 sm:p-10">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[240px_1fr] lg:items-start">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-[240px] overflow-hidden rounded-2xl bg-background-soft">
+              <Image
+                src="/images/director-portrait.png"
+                alt="초록이비인후과의원 대표원장"
+                fill
+                sizes="(min-width: 1024px) 240px, 60vw"
+                className="object-cover object-top"
+              />
+            </div>
+
+            <div>
+              <p className="text-sm font-semibold text-primary">대표원장</p>
+              <h3 className="mt-2 text-2xl font-bold tracking-tight text-foreground">
+                원장 약력
+              </h3>
+
+              <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
+                {CREDENTIALS.map(({ icon: CredentialIcon, heading, items }) => (
+                  <div key={heading}>
+                    <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary-light text-primary">
+                      <CredentialIcon size={22} weight="bold" aria-hidden />
+                    </div>
+                    <h4 className="mt-4 text-base font-bold text-foreground">
+                      {heading}
+                    </h4>
+                    <ul className="mt-3 space-y-2">
+                      {items.map((item) => (
+                        <li
+                          key={item}
+                          className="flex items-start gap-2 text-[15px] leading-relaxed text-muted-foreground"
+                        >
+                          <span
+                            aria-hidden
+                            className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
+                          />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

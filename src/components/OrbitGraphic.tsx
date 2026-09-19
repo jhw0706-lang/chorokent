@@ -10,7 +10,7 @@ type OrbitLabel = {
 const LABELS: OrbitLabel[] = [
   { slug: "rhinitis", label: "비염", top: "22%", left: "58%" },
   { slug: "vertigo", label: "이석증", top: "52%", left: "10%" },
-  { slug: "hearing-loss", label: "난청", top: "78%", left: "48%" },
+  { slug: "hearing-loss", label: "난청·이명", top: "78%", left: "48%" },
   { slug: "allergy", label: "알레르기", top: "38%", left: "96%" },
   { slug: "immunotherapy", label: "면역치료", top: "74%", left: "88%" },
 ];
