@@ -57,9 +57,9 @@ const CREDENTIALS: CredentialGroup[] = [
     icon: TrophyIcon,
     heading: "수상",
     items: [
-      "국군의무사령관 준장 표창",
-      "해군교육사령관 중장 표창",
       "보건복지부 장관상",
+      "해군교육사령관 중장 표창",
+      "국군의무사령관 준장 표창",
     ],
   },
 ];
