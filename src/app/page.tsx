@@ -7,11 +7,13 @@ import Hours from "@/components/Hours";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
+import NoticeModal from "@/components/NoticeModal";
 import SmoothScrollHero from "@/components/ui/smooth-scroll-hero";
 
 export default function Home() {
   return (
     <>
+      <NoticeModal />
       <Header />
       <main className="flex-1">
         <SmoothScrollHero
