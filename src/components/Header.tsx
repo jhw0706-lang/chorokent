@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Logo } from "./Logo";
 import { ListIcon, PhoneCallIcon, XIcon } from "@phosphor-icons/react";
 
@@ -20,9 +21,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:h-20 sm:px-8">
-        <a href="#top" className="shrink-0">
+        <Link href="/" aria-label="초록이비인후과의원 홈" className="shrink-0">
           <Logo markSize={38} wordmarkClassName="text-base sm:text-lg" />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="주요 메뉴">
           {NAV_ITEMS.map((item) => (
