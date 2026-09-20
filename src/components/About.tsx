@@ -53,7 +53,7 @@ const CREDENTIALS: CredentialGroup[] = [
     heading: "경력",
     items: [
       "前 인제대학교 일산백병원",
-      "前 국립경찰병원 이비인후과",
+      "前 국립경찰병원",
       "前 해군교육사령부",
     ],
   },
