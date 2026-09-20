@@ -9,9 +9,7 @@ import {
 
 const ADDRESS = "서울특별시 송파구 백제고분로 187 3층";
 const PHONE_NUMBER = "02-997-9988";
-const NAVER_MAP_URL = `https://map.naver.com/p/search/${encodeURIComponent(
-  "초록이비인후과의원 " + ADDRESS
-)}`;
+const NAVER_MAP_URL = "https://map.naver.com/p/entry/place/37816886";
 
 export default function Location() {
   return (
