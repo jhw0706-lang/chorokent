@@ -3,33 +3,62 @@
 import { useEffect, useState } from "react";
 import { XIcon } from "@phosphor-icons/react";
 
-const DISMISS_KEY = "chorokent-notice-dismissed-date";
+type Notice = {
+  id: string;
+  heading: string[];
+  badge: string;
+  subText: string;
+  dateText: string;
+};
+
+const NOTICES: Notice[] = [
+  {
+    id: "elderly-flu-covid-2026",
+    heading: ["고령자  동시접종", "독감 & 코로나19 백신"],
+    badge: "65세 이상",
+    subText: "(~ 1961.12.31. 출생자)",
+    dateText: "10월 6일부터",
+  },
+  {
+    id: "child-flu-2026",
+    heading: ["어린이 국가 독감"],
+    badge: "생후 6개월~14세",
+    subText: "(2012.1.1. ~ 2026.8.31. 출생자)",
+    dateText: "9월 21일부터",
+  },
+];
+
+const dismissKey = (id: string) => `chorokent-notice-dismissed-${id}`;
 
 export default function NoticeModal() {
-  const [open, setOpen] = useState(false);
+  const [queue, setQueue] = useState<Notice[]>([]);
   const [hideToday, setHideToday] = useState(false);
 
   useEffect(() => {
     try {
       const today = new Date().toDateString();
-      if (localStorage.getItem(DISMISS_KEY) !== today) {
-        setOpen(true);
-      }
+      const pending = NOTICES.filter(
+        (notice) => localStorage.getItem(dismissKey(notice.id)) !== today
+      );
+      setQueue(pending);
     } catch {
-      setOpen(true);
+      setQueue(NOTICES);
     }
   }, []);
 
+  const current = queue[0];
+
   const handleClose = () => {
-    if (hideToday) {
+    if (current && hideToday) {
       try {
-        localStorage.setItem(DISMISS_KEY, new Date().toDateString());
+        localStorage.setItem(dismissKey(current.id), new Date().toDateString());
       } catch {}
     }
-    setOpen(false);
+    setHideToday(false);
+    setQueue((prev) => prev.slice(1));
   };
 
-  if (!open) return null;
+  if (!current) return null;
 
   return (
     <div
@@ -64,20 +93,25 @@ export default function NoticeModal() {
           id="notice-modal-heading"
           className="mt-6 text-3xl font-black tracking-tight text-foreground"
         >
-          어린이 국가 독감
+          {current.heading.map((line, i) => (
+            <span key={line}>
+              {line}
+              {i < current.heading.length - 1 && <br />}
+            </span>
+          ))}
         </h2>
 
         <p className="mt-4 inline-block bg-yellow-200 px-2 py-1 text-xl font-bold text-foreground">
-          생후 6개월~14세
+          {current.badge}
         </p>
         <p className="mt-2 text-[15px] text-muted-foreground">
-          (2012.1.1. ~ 2026.8.31. 출생자)
+          {current.subText}
         </p>
 
         <div className="mt-6 h-px bg-border" />
 
         <div className="mt-6 rounded-md bg-accent-dark px-5 py-3 text-center text-lg font-extrabold text-white">
-          9월 21일부터
+          {current.dateText}
         </div>
 
         <label className="mt-6 flex cursor-pointer items-center gap-2 text-sm text-muted-foreground">
