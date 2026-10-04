@@ -46,7 +46,7 @@ const CREDENTIALS: CredentialGroup[] = [
   {
     icon: GraduationCapIcon,
     heading: "학력",
-    items: ["인제대학교 의과대학 졸업"],
+    items: ["인제대학교 의과대학\n(의예과, 의학과)"],
   },
   {
     icon: BriefcaseIcon,
@@ -137,7 +137,7 @@ export default function About() {
                             aria-hidden
                             className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
                           />
-                          {item}
+                          <span className="whitespace-pre-line">{item}</span>
                         </li>
                       ))}
                     </ul>
